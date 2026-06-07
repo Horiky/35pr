@@ -26,4 +26,19 @@ namespace PermAkcy
             InitializeComponent();
         }
     }
+    public enum pages
+    {
+        main, // главная страница
+        chart // страница с графиком
+    }
+
+    public void OpenPages(pages _pages)
+    {
+        if (_pages == pages.main)
+            frame.Navigate(new Pages.main(this));
+        else if (_pages == pages.chart)
+        {
+            frame.Navigate(new Pages.Chart(this));
+        }
+    }
 }

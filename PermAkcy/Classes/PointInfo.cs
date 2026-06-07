@@ -2,7 +2,7 @@
 
 namespace PermAkcy.Classes
 {
-    class PointInfo
+    public class PointInfo
     {
         // Значение
         public double value { get; set; }

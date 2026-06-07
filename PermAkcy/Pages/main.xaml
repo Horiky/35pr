@@ -15,7 +15,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/PermAkcy;component/Images/charts.jpg" Opacity="1"/>
         </Grid.Background>
-        <Image HorizontalAlignment="Left" Height="100" Margin="183,224,0,0" VerticalAlignment="Top" Width="100" Source="/Dynamics_Markov;component/Images/icon.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="183,224,0,0" VerticalAlignment="Top" Width="100" Source="/PermAkcy;component/Images/icon.png"/>
         <Label Content="Укажите начальное значение акции:" Grid.Column="1" Margin="12.2,191,82.4,192.6" 
                VerticalAlignment="Center" Foreground="White" Height="26" HorizontalAlignment="Center"/>
         <TextBox x:Name="tb_value" Grid.Column="1" Height="25" 

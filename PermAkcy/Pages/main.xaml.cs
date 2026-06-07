@@ -20,16 +20,20 @@ namespace PermAkcy.Pages
     /// </summary>
     public partial class main : Page
     {
-        public main()
+        private MainWindow mainWindow;
+
+        public main(MainWindow window)
         {
             InitializeComponent();
+            mainWindow = window;
         }
+
         private void OpenPageChart(object sender, RoutedEventArgs e)
         {
             // конвертируем значение текстового поля
-            float value = Convert.ToInt32(tb_value.Text);
+            double value = Convert.ToDouble(tb_value.Text);
             // добавляем значение в массив
-            mainWindow.pointsInfo.Add(new Classess.PointInfo(value));
+            mainWindow.pointsInfo.Add(new Classes.PointInfo(value));
             // открываем страницу с графиками
             mainWindow.OpenPages(MainWindow.pages.chart);
         }

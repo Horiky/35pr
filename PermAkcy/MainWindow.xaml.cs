@@ -21,24 +21,27 @@ namespace PermAkcy
     public partial class MainWindow : Window
     {
         public List<Classes.PointInfo> pointsInfo = new List<Classes.PointInfo>();
+
+        public enum pages
+        {
+            main, // главная страница
+            chart // страница с графиком
+        }
+
         public MainWindow()
         {
             InitializeComponent();
+            OpenPages(pages.main);
         }
-    }
-    public enum pages
-    {
-        main, // главная страница
-        chart // страница с графиком
-    }
 
-    public void OpenPages(pages _pages)
-    {
-        if (_pages == pages.main)
-            frame.Navigate(new Pages.main(this));
-        else if (_pages == pages.chart)
+        public void OpenPages(pages _pages)
         {
-            frame.Navigate(new Pages.Chart(this));
+            if (_pages == pages.main)
+                frame.Navigate(new Pages.main(this));
+            else if (_pages == pages.chart)
+            {
+                frame.Navigate(new Pages.Chart(this));
+            }
         }
     }
 }

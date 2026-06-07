@@ -24,5 +24,14 @@ namespace PermAkcy.Pages
         {
             InitializeComponent();
         }
+        private void OpenPageChart(object sender, RoutedEventArgs e)
+        {
+            // конвертируем значение текстового поля
+            float value = Convert.ToInt32(tb_value.Text);
+            // добавляем значение в массив
+            mainWindow.pointsInfo.Add(new Classess.PointInfo(value));
+            // открываем страницу с графиками
+            mainWindow.OpenPages(MainWindow.pages.chart);
+        }
     }
 }
